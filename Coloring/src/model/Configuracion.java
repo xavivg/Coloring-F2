@@ -3,12 +3,12 @@ package model;
 public class Configuracion {
     private int k; //not sure
     private int nota;
-    private int[] casos;
+    private int[] regions;
 
-    public Configuracion(int k, int nota, int[] casos) {
+    public Configuracion(int k, int nota, int[] regions) {
         this.k = k;
         this.nota = nota;
-        this.casos = casos;
+        this.regions = regions;
     }
 
     public Configuracion() {
@@ -30,11 +30,11 @@ public class Configuracion {
         this.nota = nota;
     }
 
-    public int[] getCasos() {
-        return casos;
+    public int[] getRegions() {
+        return regions;
     }
 
-    public void setCasos(int[] casos) {
-        this.casos = casos;
+    public void setRegions(int[] regions) {
+        this.regions = regions;
     }
 }

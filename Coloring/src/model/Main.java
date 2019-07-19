@@ -7,17 +7,8 @@ import java.util.Scanner;
 
 import static Controller.FileController.loadFile;
 
-/**
- * Clase con un procedimiento principal que ilustra el funcionamiento de la clase "BoardGUI".
- *
- * @author Xavi Solé (xavier.sole@salle.url.edu) - La Salle, Universitat Ramon Llull
- * @version 10/04/2019
- */
 public class Main {
 
-    /**
-     * Procedimiento principal que crea una ventana y pinta 6 celdas de color distinto.
-     */
     public static Conf configuration;
     public static BoardGUI vista;
     public static int numColors = 0;

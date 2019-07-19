@@ -10,7 +10,7 @@ import static model.Main.xMejor;
 
 public class BandBController {
 
-    public static void branchAndBound(Conf conf, int k) throws InterruptedException {
+    public static Configuracion branchAndBound() throws InterruptedException {
         PriorityQueue<Configuracion> nodosVivos = new PriorityQueue(new Comparator<Configuracion>() {
             @Override
             public int compare(Configuracion o1, Configuracion o2) {
@@ -18,9 +18,9 @@ public class BandBController {
             }
         });
         Configuracion x = new Configuracion();
-        x = configuracionRaiz(x, conf);
+        x = configuracionRaiz(x);
         nodosVivos.add(x);
-        Conf[] hijos = new Conf[MAX_COLORS];
+        Configuracion[] hijos = new Configuracion[MAX_COLORS];
         hijos = expande(x);
         while (nodosVivos.isEmpty()){
            x = nodosVivos.poll();
@@ -29,5 +29,7 @@ public class BandBController {
             }
         }
         nodosVivos.remove(x);
+
+        return x;
     }
 }

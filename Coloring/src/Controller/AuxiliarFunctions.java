@@ -126,18 +126,18 @@ public class AuxiliarFunctions {
             Main.numSolutions++;
         }
     }
-    public static Configuracion configuracionRaiz(Configuracion x, Conf conf){
+    public static Configuracion configuracionRaiz(Configuracion x){
         x.setK(-1);
-        int casos[] = new int[conf.getNumRegions()];
-        x.setCasos(casos);
+        int regions[] = new int[Main.configuration.getNumRegions()];
+        x.setRegions(regions);
         return x;
     }
-    public static Conf[] expande(Configuracion x){
+    public static Configuracion[] expande(Configuracion x){
         Configuracion[] hijos = new Configuracion[MAX_COLORS];
 
         for (int i = 0; i < hijos.length; i++) {
-            hijos[i].setCasos(x.getCasos());
-            hijos[i].setCasos();
+            hijos[i].setRegions(x.getRegions());
+            hijos[i].setRegions();
         }
         return hijos;
     }
