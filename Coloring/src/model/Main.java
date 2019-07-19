@@ -1,6 +1,11 @@
 package model;
 
+import Controller.AuxiliarFunctions;
 import view.BoardGUI;
+
+import java.util.Scanner;
+
+import static Controller.FileController.loadFile;
 
 /**
  * Clase con un procedimiento principal que ilustra el funcionamiento de la clase "BoardGUI".
@@ -13,8 +18,28 @@ public class Main {
     /**
      * Procedimiento principal que crea una ventana y pinta 6 celdas de color distinto.
      */
+    public static Conf configuration;
+    public static BoardGUI vista;
+    public static int numColors = 0;
+    public static int[] xMejor;
+    public static int vMejor = AuxiliarFunctions.MAX_COLORS;
+    public static int numSolutions = 0;
     public static void main(String[] args) {
         // Crear la GUI en función de la dimensión y las regiones
+
+        String file;
+        Scanner reader = new Scanner(System.in);  // Reading from System.in
+
+        while (configuration == null) {
+            System.out.println("Introduce el nombre del fichero con el tablero a resolver: ");
+            file = reader.next();
+            configuration = loadFile(file);
+        }
+
+        int[] x = new int[configuration.getNumRegions()];
+
+
+
         BoardGUI vista = new BoardGUI(10, 6);
         // Mostrar la vista
         vista.setVisible(true);
