@@ -1,6 +1,7 @@
 package Controller;
 
 import model.Conf;
+import model.Configuracion;
 import model.Main;
 import model.Marcaje;
 
@@ -125,13 +126,13 @@ public class AuxiliarFunctions {
             Main.numSolutions++;
         }
     }
-    public static Conf configuracionRaiz(Conf x){
+    public static Configuracion configuracionRaiz(Configuracion x, Conf conf){
         x.setK(-1);
-        int casos[] = new int[x.getNumRegions()];
+        int casos[] = new int[conf.getNumRegions()];
         x.setCasos(casos);
         return x;
     }
-    public static Conf[] expande(Conf x){
+    public static Conf[] expande(Configuracion x){
         Conf[] hijos = new Conf[MAX_COLORS];
 
         for (int i = 0; i < hijos.length; i++) {

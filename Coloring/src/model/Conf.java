@@ -6,9 +6,6 @@ public class Conf {
     private int numRegions;
     private int[][] regions;
     private boolean[][] adjacencies;
-    private int k; //not sure
-    private int nota;
-    private int[] casos;
 
     public Conf() {
     }
