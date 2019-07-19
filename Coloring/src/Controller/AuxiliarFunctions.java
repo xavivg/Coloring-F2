@@ -133,7 +133,7 @@ public class AuxiliarFunctions {
         return x;
     }
     public static Conf[] expande(Configuracion x){
-        Conf[] hijos = new Conf[MAX_COLORS];
+        Configuracion[] hijos = new Configuracion[MAX_COLORS];
 
         for (int i = 0; i < hijos.length; i++) {
             hijos[i].setCasos(x.getCasos());

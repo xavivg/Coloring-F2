@@ -24,6 +24,9 @@ public class BandBController {
         hijos = expande(x);
         while (nodosVivos.isEmpty()){
            x = nodosVivos.poll();
+            for (int i = 0; i < hijos.length; i++) {
+
+            }
         }
         nodosVivos.remove(x);
     }
